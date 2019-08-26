@@ -1,213 +1,70 @@
-08:46:48.810 INFO  --------------------------- 开始编译 --------------------------- 
-08:46:48.810 INFO  程序运行目录: C:\Users\my\3D Objects\cabinet 
-08:46:48.810 INFO  首次启动! 
-08:46:48.810 INFO  生成版本号: zjhoalhxc7b 
-08:46:48.810 INFO  文件夹不存在: C:\Users\my\3D Objects\cabinet\dist 
-08:46:48.810 INFO  创建文件夹: C:\Users\my\3D Objects\cabinet\dist 
-08:46:48.810 INFO  文件夹不存在: C:\Users\my\3D Objects\cabinet\dist\static 
-08:46:48.810 INFO  创建文件夹: C:\Users\my\3D Objects\cabinet\dist\static 
-08:46:48.810 INFO  读取模板文件: C:\Users\my\Documents\GitHub\pack\lib\index.html 
-08:46:48.810 DEBUG 读取网页标题: 页面 
-08:46:48.810 DEBUG 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}] 
-08:46:48.810 DEBUG 模块 home 因名称重复被重命名为 home0 
-08:46:48.810 INFO  开始处理模块: home 
-08:46:48.912 DEBUG 缓存模板: home./src/page/home.page 
-08:46:48.912 DEBUG 模板home处理用时: 102 毫秒! 
-08:46:48.912 INFO  文件夹不存在: C:/Users/my/3D Objects/cabinet/dist/static/resource 
-08:46:48.912 INFO  创建文件夹: C:/Users/my/3D Objects/cabinet/dist/static/resource 
-08:46:48.912 DEBUG css中的资源处理完毕! 
-08:46:48.912 DEBUG 使用postcss处理样式，使用了1个插件! 
-08:46:48.959 INFO  文件夹不存在: C:\Users\my\3D Objects\cabinet\dist\static\css 
-08:46:48.959 INFO  创建文件夹: C:\Users\my\3D Objects\cabinet\dist\static\css 
-08:46:48.959 INFO  读取文件: C:\Users\my\3D Objects\cabinet\src\main.css 
-08:46:48.959 INFO  附属css中的资源不需要处理! 
-08:46:48.959 INFO  处理字体:{} 
-08:46:49.084 INFO  使用postcss处理完毕! 用时: 172 毫秒 
-08:46:49.084 DEBUG 需要经过特殊处理的css: [["[template=\"home\"] .box:",".box[template=\"home\"]:"],["[template=\"home\"] .box ",".box[template=\"home\"] "],["[template=\"home\"] .box{",".box[template=\"home\"]{"],["[template=\"home\"] div:","div[template=\"home\"]:"],["[template=\"home\"] div ","div[template=\"home\"] "],["[template=\"home\"] div{","div[template=\"home\"]{"]] 
-08:46:49.084 INFO  正在处理script! 
-08:46:49.084 INFO  工程中只有一个页面! 
-08:46:49.084 DEBUG 添加解决方案: ie 
-08:46:49.084 ERROR file does not exist: C:\Users\my\Documents\GitHub\pack\core\scheme\ie.js 
-08:46:49.084 INFO  文件夹不存在: C:\Users\my\3D Objects\cabinet\dist\static\js 
-08:46:49.084 INFO  创建文件夹: C:\Users\my\3D Objects\cabinet\dist\static\js 
-08:46:49.084 DEBUG 选择将js合并到html中! 
-08:46:49.831 INFO  js中的资源处理完毕! 
-08:46:49.831 INFO  读取文件: C:\Users\my\Documents\GitHub\pack\core\debug\autoReload.js 
-08:46:49.831 INFO  读取文件: C:\Users\my\Documents\GitHub\pack\core\debug\log.js 
-08:46:49.831 DEBUG 处理引用脚本: [{"name":"three.js","src":"./src/script/three.js","babel":false,"defer":false},{"name":"FBXLoader","src":"./src/script/FBXLoader.js","babel":false,"defer":false},{"name":"OrbitControls","src":"./src/script/OrbitControls.js","babel":false,"defer":false},{"name":"WebGL","src":"./src/script/WebGL.js","babel":false,"defer":false},{"name":"inflate.min","src":"./src/script/inflate.min.js","babel":false,"defer":false},{"name":"RectAreaLightUniformsLib","src":"./src/script/RectAreaLightUniformsLib.js","babel":false,"defer":false}] 
-08:46:49.831 DEBUG 外部脚本数量: 6 
-08:46:49.831 DEBUG 处理脚本: three.js 
-08:46:49.831 INFO  读取文件: C:\Users\my\3D Objects\cabinet\src\script\three.js 
-08:46:49.831 DEBUG 处理脚本: FBXLoader 
-08:46:49.831 INFO  读取文件: C:\Users\my\3D Objects\cabinet\src\script\FBXLoader.js 
-08:46:49.831 DEBUG 处理脚本: OrbitControls 
-08:46:49.831 INFO  读取文件: C:\Users\my\3D Objects\cabinet\src\script\OrbitControls.js 
-08:46:49.831 DEBUG 处理脚本: WebGL 
-08:46:49.831 INFO  读取文件: C:\Users\my\3D Objects\cabinet\src\script\WebGL.js 
-08:46:49.831 DEBUG 处理脚本: inflate.min 
-08:46:49.831 INFO  读取文件: C:\Users\my\3D Objects\cabinet\src\script\inflate.min.js 
-08:46:49.831 DEBUG 处理脚本: RectAreaLightUniformsLib 
-08:46:49.831 INFO  读取文件: C:\Users\my\3D Objects\cabinet\src\script\RectAreaLightUniformsLib.js 
-08:46:49.831 DEBUG 输出scriptData 
-08:46:49.831 DEBUG 准备输出html! 
-08:46:49.831 DEBUG 开始美化html 
-08:46:49.878 INFO  发送重新页面需要刷新命令! 
-08:46:49.883 INFO  读取成功: C:\Users\my\3D Objects\cabinet\src\main.css 
-08:46:49.883 INFO  读取成功: C:\Users\my\Documents\GitHub\pack\core\debug\log.js 
-08:46:49.883 INFO  读取成功: C:\Users\my\Documents\GitHub\pack\core\debug\autoReload.js 
-08:46:49.883 INFO  主要逻辑文件写出成功! 
-08:46:49.883 INFO  读取成功: C:\Users\my\3D Objects\cabinet\src\script\WebGL.js 
-08:46:49.883 INFO  读取成功: C:\Users\my\3D Objects\cabinet\src\script\inflate.min.js 
-08:46:49.884 INFO  读取成功: C:\Users\my\3D Objects\cabinet\src\script\OrbitControls.js 
-08:46:49.886 INFO  写入文件: C:\Users\my\3D Objects\cabinet\dist\static\css\main.css 
-08:46:49.888 INFO  写入文件: C:\Users\my\3D Objects\cabinet\dist\static\js\autoReload.js 
-08:46:49.889 INFO  写入文件: C:\Users\my\3D Objects\cabinet\dist\static\js\WebGL.js 
-08:46:49.889 INFO  写入文件: C:\Users\my\3D Objects\cabinet\dist\static\js\log.js 
-08:46:49.892 INFO  写入文件: C:\Users\my\3D Objects\cabinet\dist\static\js\inflate.min.js 
-08:46:49.892 INFO  写入文件: C:\Users\my\3D Objects\cabinet\dist\static\js\OrbitControls.js 
-08:46:49.893 INFO  读取成功: C:\Users\my\3D Objects\cabinet\src\script\FBXLoader.js 
-08:46:49.897 INFO  写入文件: C:\Users\my\3D Objects\cabinet\dist\static\js\FBXLoader.js 
-08:46:49.902 INFO  读取成功: C:\Users\my\3D Objects\cabinet\src\script\RectAreaLightUniformsLib.js 
-08:46:49.903 INFO  写入文件: C:\Users\my\3D Objects\cabinet\dist\static\js\RectAreaLightUniformsLib.js 
-08:46:49.905 INFO  读取成功: C:\Users\my\3D Objects\cabinet\src\script\three.js 
-08:46:49.906 INFO  写入文件: C:\Users\my\3D Objects\cabinet\dist\static\js\three.js.js 
-08:47:11.898 INFO  file change: C:\Users\my\3D Objects\cabinet\src\page\home.page 
-08:47:11.899 INFO  --------------------------- 开始编译 --------------------------- 
-08:47:11.899 INFO  程序运行目录: C:\Users\my\3D Objects\cabinet 
-08:47:11.899 INFO  刷新模式,变化目录: C:\Users\my\3D Objects\cabinet\src\page\home.page 
-08:47:11.899 INFO  读取模板文件: C:\Users\my\Documents\GitHub\pack\lib\index.html 
-08:47:11.899 DEBUG 读取网页标题: 页面 
-08:47:11.899 DEBUG 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}] 
-08:47:11.900 DEBUG 模块 home 因名称重复被重命名为 home0 
-08:47:11.900 INFO  开始处理模块: home 
-08:47:11.906 DEBUG 缓存模板: home./src/page/home.page 
-08:47:11.906 DEBUG 模板home处理用时: 6 毫秒! 
-08:47:11.906 DEBUG css中的资源处理完毕! 
-08:47:11.906 DEBUG 使用postcss处理样式，使用了1个插件! 
-08:47:11.906 INFO  处理字体:{} 
-08:47:11.906 INFO  使用postcss处理完毕! 用时: 0 毫秒 
-08:47:11.906 DEBUG 需要经过特殊处理的css: [["[template=\"home\"] .box:",".box[template=\"home\"]:"],["[template=\"home\"] .box ",".box[template=\"home\"] "],["[template=\"home\"] .box{",".box[template=\"home\"]{"],["[template=\"home\"] div:","div[template=\"home\"]:"],["[template=\"home\"] div ","div[template=\"home\"] "],["[template=\"home\"] div{","div[template=\"home\"]{"]] 
-08:47:11.906 INFO  正在处理script! 
-08:47:11.906 INFO  工程中只有一个页面! 
-08:47:11.906 DEBUG 添加解决方案: ie 
-08:47:11.906 ERROR file does not exist: C:\Users\my\Documents\GitHub\pack\core\scheme\ie.js 
-08:47:11.906 DEBUG 选择将js合并到html中! 
-08:47:12.007 INFO  js中的资源处理完毕! 
-08:47:12.007 DEBUG 处理引用脚本: [{"name":"three.js","src":"./src/script/three.js","babel":false,"defer":false},{"name":"FBXLoader","src":"./src/script/FBXLoader.js","babel":false,"defer":false},{"name":"OrbitControls","src":"./src/script/OrbitControls.js","babel":false,"defer":false},{"name":"WebGL","src":"./src/script/WebGL.js","babel":false,"defer":false},{"name":"inflate.min","src":"./src/script/inflate.min.js","babel":false,"defer":false},{"name":"RectAreaLightUniformsLib","src":"./src/script/RectAreaLightUniformsLib.js","babel":false,"defer":false}] 
-08:47:12.007 DEBUG 外部脚本数量: 6 
-08:47:12.007 DEBUG 处理脚本: three.js 
-08:47:12.007 DEBUG 处理脚本: FBXLoader 
-08:47:12.007 DEBUG 处理脚本: OrbitControls 
-08:47:12.007 DEBUG 处理脚本: WebGL 
-08:47:12.007 DEBUG 处理脚本: inflate.min 
-08:47:12.007 DEBUG 处理脚本: RectAreaLightUniformsLib 
-08:47:12.007 DEBUG 输出scriptData 
-08:47:12.007 DEBUG 准备输出html! 
-08:47:12.007 DEBUG 开始美化html 
-08:47:12.038 INFO  发送重新页面需要刷新命令! 
-08:47:12.038 INFO  主要逻辑文件写出成功! 
-09:07:39.718 INFO  file change: C:\Users\my\3D Objects\cabinet\src\page\home.page 
-09:07:39.718 INFO  --------------------------- 开始编译 --------------------------- 
-09:07:39.718 INFO  程序运行目录: C:\Users\my\3D Objects\cabinet 
-09:07:39.718 INFO  刷新模式,变化目录: C:\Users\my\3D Objects\cabinet\src\page\home.page 
-09:07:39.718 INFO  读取模板文件: C:\Users\my\Documents\GitHub\pack\lib\index.html 
-09:07:39.719 DEBUG 读取网页标题: 页面 
-09:07:39.719 DEBUG 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}] 
-09:07:39.719 DEBUG 模块 home 因名称重复被重命名为 home0 
-09:07:39.719 INFO  开始处理模块: home 
-09:07:39.725 DEBUG 缓存模板: home./src/page/home.page 
-09:07:39.725 DEBUG 模板home处理用时: 6 毫秒! 
-09:07:39.725 DEBUG css中的资源处理完毕! 
-09:07:39.725 DEBUG 使用postcss处理样式，使用了1个插件! 
-09:07:39.728 INFO  处理字体:{} 
-09:07:39.728 INFO  使用postcss处理完毕! 用时: 3 毫秒 
-09:07:39.728 DEBUG 需要经过特殊处理的css: [["[template=\"home\"] .box:",".box[template=\"home\"]:"],["[template=\"home\"] .box ",".box[template=\"home\"] "],["[template=\"home\"] .box{",".box[template=\"home\"]{"],["[template=\"home\"] div:","div[template=\"home\"]:"],["[template=\"home\"] div ","div[template=\"home\"] "],["[template=\"home\"] div{","div[template=\"home\"]{"]] 
-09:07:39.728 INFO  正在处理script! 
-09:07:39.729 INFO  工程中只有一个页面! 
-09:07:39.730 DEBUG 添加解决方案: ie 
-09:07:39.730 ERROR file does not exist: C:\Users\my\Documents\GitHub\pack\core\scheme\ie.js 
-09:07:39.730 DEBUG 选择将js合并到html中! 
-09:07:39.785 INFO  js中的资源处理完毕! 
-09:07:39.785 DEBUG 处理引用脚本: [{"name":"three.js","src":"./src/script/three.js","babel":false,"defer":false},{"name":"FBXLoader","src":"./src/script/FBXLoader.js","babel":false,"defer":false},{"name":"OrbitControls","src":"./src/script/OrbitControls.js","babel":false,"defer":false},{"name":"WebGL","src":"./src/script/WebGL.js","babel":false,"defer":false},{"name":"inflate.min","src":"./src/script/inflate.min.js","babel":false,"defer":false},{"name":"RectAreaLightUniformsLib","src":"./src/script/RectAreaLightUniformsLib.js","babel":false,"defer":false}] 
-09:07:39.785 DEBUG 外部脚本数量: 6 
-09:07:39.785 DEBUG 处理脚本: three.js 
-09:07:39.785 DEBUG 处理脚本: FBXLoader 
-09:07:39.785 DEBUG 处理脚本: OrbitControls 
-09:07:39.785 DEBUG 处理脚本: WebGL 
-09:07:39.785 DEBUG 处理脚本: inflate.min 
-09:07:39.785 DEBUG 处理脚本: RectAreaLightUniformsLib 
-09:07:39.785 DEBUG 输出scriptData 
-09:07:39.785 DEBUG 准备输出html! 
-09:07:39.785 DEBUG 开始美化html 
-09:07:39.807 INFO  发送重新页面需要刷新命令! 
-09:07:39.810 INFO  主要逻辑文件写出成功! 
-09:07:50.342 INFO  file change: C:\Users\my\3D Objects\cabinet\src\page\home.page 
-09:07:50.342 INFO  --------------------------- 开始编译 --------------------------- 
-09:07:50.342 INFO  程序运行目录: C:\Users\my\3D Objects\cabinet 
-09:07:50.342 INFO  刷新模式,变化目录: C:\Users\my\3D Objects\cabinet\src\page\home.page 
-09:07:50.342 INFO  读取模板文件: C:\Users\my\Documents\GitHub\pack\lib\index.html 
-09:07:50.343 DEBUG 读取网页标题: 页面 
-09:07:50.343 DEBUG 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}] 
-09:07:50.343 DEBUG 模块 home 因名称重复被重命名为 home0 
-09:07:50.343 INFO  开始处理模块: home 
-09:07:50.348 DEBUG 缓存模板: home./src/page/home.page 
-09:07:50.348 DEBUG 模板home处理用时: 5 毫秒! 
-09:07:50.348 DEBUG css中的资源处理完毕! 
-09:07:50.348 DEBUG 使用postcss处理样式，使用了1个插件! 
-09:07:50.350 INFO  处理字体:{} 
-09:07:50.351 INFO  使用postcss处理完毕! 用时: 3 毫秒 
-09:07:50.351 DEBUG 需要经过特殊处理的css: [["[template=\"home\"] .box:",".box[template=\"home\"]:"],["[template=\"home\"] .box ",".box[template=\"home\"] "],["[template=\"home\"] .box{",".box[template=\"home\"]{"],["[template=\"home\"] div:","div[template=\"home\"]:"],["[template=\"home\"] div ","div[template=\"home\"] "],["[template=\"home\"] div{","div[template=\"home\"]{"]] 
-09:07:50.351 INFO  正在处理script! 
-09:07:50.351 INFO  工程中只有一个页面! 
-09:07:50.352 DEBUG 添加解决方案: ie 
-09:07:50.352 ERROR file does not exist: C:\Users\my\Documents\GitHub\pack\core\scheme\ie.js 
-09:07:50.352 DEBUG 选择将js合并到html中! 
-09:07:50.398 INFO  js中的资源处理完毕! 
-09:07:50.398 DEBUG 处理引用脚本: [{"name":"three.js","src":"./src/script/three.js","babel":false,"defer":false},{"name":"FBXLoader","src":"./src/script/FBXLoader.js","babel":false,"defer":false},{"name":"OrbitControls","src":"./src/script/OrbitControls.js","babel":false,"defer":false},{"name":"WebGL","src":"./src/script/WebGL.js","babel":false,"defer":false},{"name":"inflate.min","src":"./src/script/inflate.min.js","babel":false,"defer":false},{"name":"RectAreaLightUniformsLib","src":"./src/script/RectAreaLightUniformsLib.js","babel":false,"defer":false}] 
-09:07:50.398 DEBUG 外部脚本数量: 6 
-09:07:50.398 DEBUG 处理脚本: three.js 
-09:07:50.398 DEBUG 处理脚本: FBXLoader 
-09:07:50.398 DEBUG 处理脚本: OrbitControls 
-09:07:50.398 DEBUG 处理脚本: WebGL 
-09:07:50.398 DEBUG 处理脚本: inflate.min 
-09:07:50.398 DEBUG 处理脚本: RectAreaLightUniformsLib 
-09:07:50.398 DEBUG 输出scriptData 
-09:07:50.399 DEBUG 准备输出html! 
-09:07:50.399 DEBUG 开始美化html 
-09:07:50.419 INFO  发送重新页面需要刷新命令! 
-09:07:50.421 INFO  主要逻辑文件写出成功! 
-09:08:04.073 INFO  file change: C:\Users\my\3D Objects\cabinet\src\page\home.page 
-09:08:04.073 INFO  --------------------------- 开始编译 --------------------------- 
-09:08:04.073 INFO  程序运行目录: C:\Users\my\3D Objects\cabinet 
-09:08:04.073 INFO  刷新模式,变化目录: C:\Users\my\3D Objects\cabinet\src\page\home.page 
-09:08:04.073 INFO  读取模板文件: C:\Users\my\Documents\GitHub\pack\lib\index.html 
-09:08:04.074 DEBUG 读取网页标题: 页面 
-09:08:04.074 DEBUG 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}] 
-09:08:04.074 DEBUG 模块 home 因名称重复被重命名为 home0 
-09:08:04.074 INFO  开始处理模块: home 
-09:08:04.078 DEBUG 缓存模板: home./src/page/home.page 
-09:08:04.078 DEBUG 模板home处理用时: 4 毫秒! 
-09:08:04.079 DEBUG css中的资源处理完毕! 
-09:08:04.079 DEBUG 使用postcss处理样式，使用了1个插件! 
-09:08:04.083 INFO  处理字体:{} 
-09:08:04.084 INFO  使用postcss处理完毕! 用时: 5 毫秒 
-09:08:04.084 DEBUG 需要经过特殊处理的css: [["[template=\"home\"] .box:",".box[template=\"home\"]:"],["[template=\"home\"] .box ",".box[template=\"home\"] "],["[template=\"home\"] .box{",".box[template=\"home\"]{"],["[template=\"home\"] div:","div[template=\"home\"]:"],["[template=\"home\"] div ","div[template=\"home\"] "],["[template=\"home\"] div{","div[template=\"home\"]{"]] 
-09:08:04.084 INFO  正在处理script! 
-09:08:04.084 INFO  工程中只有一个页面! 
-09:08:04.086 DEBUG 添加解决方案: ie 
-09:08:04.086 ERROR file does not exist: C:\Users\my\Documents\GitHub\pack\core\scheme\ie.js 
-09:08:04.086 DEBUG 选择将js合并到html中! 
-09:08:04.124 INFO  js中的资源处理完毕! 
-09:08:04.124 DEBUG 处理引用脚本: [{"name":"three.js","src":"./src/script/three.js","babel":false,"defer":false},{"name":"FBXLoader","src":"./src/script/FBXLoader.js","babel":false,"defer":false},{"name":"OrbitControls","src":"./src/script/OrbitControls.js","babel":false,"defer":false},{"name":"WebGL","src":"./src/script/WebGL.js","babel":false,"defer":false},{"name":"inflate.min","src":"./src/script/inflate.min.js","babel":false,"defer":false},{"name":"RectAreaLightUniformsLib","src":"./src/script/RectAreaLightUniformsLib.js","babel":false,"defer":false}] 
-09:08:04.124 DEBUG 外部脚本数量: 6 
-09:08:04.124 DEBUG 处理脚本: three.js 
-09:08:04.124 DEBUG 处理脚本: FBXLoader 
-09:08:04.124 DEBUG 处理脚本: OrbitControls 
-09:08:04.124 DEBUG 处理脚本: WebGL 
-09:08:04.124 DEBUG 处理脚本: inflate.min 
-09:08:04.124 DEBUG 处理脚本: RectAreaLightUniformsLib 
-09:08:04.124 DEBUG 输出scriptData 
-09:08:04.124 DEBUG 准备输出html! 
-09:08:04.124 DEBUG 开始美化html 
-09:08:04.140 INFO  发送重新页面需要刷新命令! 
-09:08:04.145 INFO  主要逻辑文件写出成功! 
+09:47:08.561 INFO  --------------------------- 开始编译 --------------------------- 
+09:47:08.561 INFO  程序运行目录: C:\Users\my\3D Objects\cabinet 
+09:47:08.561 INFO  首次启动! 
+09:47:08.561 INFO  生成版本号: 7xtr5ivud6j 
+09:47:08.565 INFO  清理资源文件夹: C:\Users\my\3D Objects\cabinet\dist\static 
+09:47:08.565 INFO  文件夹不存在: C:\Users\my\3D Objects\cabinet\dist\static 
+09:47:08.566 INFO  创建文件夹: C:\Users\my\3D Objects\cabinet\dist\static 
+09:47:08.566 INFO  读取模板文件: C:\Users\my\Documents\GitHub\pack\lib\index.html 
+09:47:08.566 DEBUG 读取网页标题: 页面 
+09:47:08.566 DEBUG 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}] 
+09:47:08.567 DEBUG 模块 home 因名称重复被重命名为 home0 
+09:47:08.567 INFO  开始处理模块: home 
+09:47:08.673 DEBUG 缓存模板: home./src/page/home.page 
+09:47:08.674 DEBUG 模板home处理用时: 107 毫秒! 
+09:47:08.675 INFO  文件夹不存在: C:/Users/my/3D Objects/cabinet/dist/static/resource 
+09:47:08.675 INFO  创建文件夹: C:/Users/my/3D Objects/cabinet/dist/static/resource 
+09:47:08.675 DEBUG css中的资源处理完毕! 
+09:47:08.675 DEBUG 使用postcss处理样式，使用了2个插件! 
+09:47:08.720 INFO  文件夹不存在: C:\Users\my\3D Objects\cabinet\dist\static\css 
+09:47:08.721 INFO  创建文件夹: C:\Users\my\3D Objects\cabinet\dist\static\css 
+09:47:08.721 INFO  读取文件: C:\Users\my\3D Objects\cabinet\src\main.css 
+09:47:08.721 INFO  附属css中的资源不需要处理! 
+09:47:08.721 INFO  处理字体:{} 
+09:47:08.733 INFO  读取成功: C:\Users\my\3D Objects\cabinet\src\main.css 
+09:47:08.735 INFO  写入文件: C:\Users\my\3D Objects\cabinet\dist\static\css\main.css 
+09:47:09.550 INFO  使用postcss处理完毕! 用时: 875 毫秒 
+09:47:09.550 DEBUG 需要经过特殊处理的css: [["[template=home] .box{",".box[template=\"home\"]{"],["[template=home] div{","div[template=\"home\"]{"]] 
+09:47:09.550 INFO  判断css中的外链情况! 
+09:47:09.551 DEBUG 发现外链列表:  
+09:47:09.551 INFO  正在处理script! 
+09:47:09.552 INFO  工程中只有一个页面! 
+09:47:09.553 DEBUG 添加解决方案: ie 
+09:47:09.553 ERROR file does not exist: C:\Users\my\Documents\GitHub\pack\core\scheme\ie.js 
+09:47:09.553 INFO  文件夹不存在: C:\Users\my\3D Objects\cabinet\dist\static\js 
+09:47:09.553 INFO  创建文件夹: C:\Users\my\3D Objects\cabinet\dist\static\js 
+09:47:10.293 INFO  js中的资源处理完毕! 
+09:47:10.293 DEBUG 处理引用脚本: [{"name":"three.js","src":"./src/script/three.js","babel":false,"defer":false},{"name":"FBXLoader","src":"./src/script/FBXLoader.js","babel":false,"defer":false},{"name":"OrbitControls","src":"./src/script/OrbitControls.js","babel":false,"defer":false},{"name":"WebGL","src":"./src/script/WebGL.js","babel":false,"defer":false},{"name":"inflate.min","src":"./src/script/inflate.min.js","babel":false,"defer":false},{"name":"RectAreaLightUniformsLib","src":"./src/script/RectAreaLightUniformsLib.js","babel":false,"defer":false}] 
+09:47:10.294 DEBUG 外部脚本数量: 6 
+09:47:10.294 DEBUG 处理脚本: three.js 
+09:47:10.294 INFO  读取文件: C:\Users\my\3D Objects\cabinet\src\script\three.js 
+09:47:10.294 DEBUG 处理脚本: FBXLoader 
+09:47:10.294 INFO  读取文件: C:\Users\my\3D Objects\cabinet\src\script\FBXLoader.js 
+09:47:10.294 DEBUG 处理脚本: OrbitControls 
+09:47:10.294 INFO  读取文件: C:\Users\my\3D Objects\cabinet\src\script\OrbitControls.js 
+09:47:10.294 DEBUG 处理脚本: WebGL 
+09:47:10.294 INFO  读取文件: C:\Users\my\3D Objects\cabinet\src\script\WebGL.js 
+09:47:10.294 DEBUG 处理脚本: inflate.min 
+09:47:10.294 INFO  读取文件: C:\Users\my\3D Objects\cabinet\src\script\inflate.min.js 
+09:47:10.294 DEBUG 处理脚本: RectAreaLightUniformsLib 
+09:47:10.294 INFO  读取文件: C:\Users\my\3D Objects\cabinet\src\script\RectAreaLightUniformsLib.js 
+09:47:10.294 DEBUG 输出scriptData 
+09:47:10.294 DEBUG 准备输出html! 
+09:47:10.294 DEBUG 开始美化html 
+09:47:10.303 INFO  判断html中的外链情况! 
+09:47:10.303 DEBUG 发现外链列表: ./static/css/owo.main.7xtr5ivud6j.css,./static/css/main.css,./static/js/owo.main.7xtr5ivud6j.js,./static/js/three.js.js,./static/js/FBXLoader.js,./static/js/OrbitControls.js,./static/js/WebGL.js,./static/js/inflate.min.js,./static/js/RectAreaLightUniformsLib.js 
+09:47:10.304 INFO  显示外链情况! 
+09:47:10.319 INFO  写入文件: C:\Users\my\3D Objects\cabinet\dist\static\css\owo.main.7xtr5ivud6j.css 
+09:47:10.320 INFO  主要逻辑文件写出成功! 
+09:47:10.326 INFO  读取成功: C:\Users\my\3D Objects\cabinet\src\script\inflate.min.js 
+09:47:10.326 INFO  读取成功: C:\Users\my\3D Objects\cabinet\src\script\WebGL.js 
+09:47:10.334 INFO  读取成功: C:\Users\my\3D Objects\cabinet\src\script\OrbitControls.js 
+09:47:10.337 INFO  写入文件: C:\Users\my\3D Objects\cabinet\dist\static\js\WebGL.js 
+09:47:10.337 INFO  写入文件: C:\Users\my\3D Objects\cabinet\dist\static\js\inflate.min.js 
+09:47:10.346 INFO  写入文件: C:\Users\my\3D Objects\cabinet\dist\static\js\OrbitControls.js 
+09:47:10.347 INFO  读取成功: C:\Users\my\3D Objects\cabinet\src\script\FBXLoader.js 
+09:47:10.348 INFO  读取成功: C:\Users\my\3D Objects\cabinet\src\script\RectAreaLightUniformsLib.js 
+09:47:10.348 INFO  写入文件: C:\Users\my\3D Objects\cabinet\dist\static\js\FBXLoader.js 
+09:47:10.349 INFO  写入文件: C:\Users\my\3D Objects\cabinet\dist\static\js\RectAreaLightUniformsLib.js 
+09:47:10.350 INFO  读取成功: C:\Users\my\3D Objects\cabinet\src\script\three.js 
+09:47:10.352 INFO  写入文件: C:\Users\my\3D Objects\cabinet\dist\static\js\three.js.js 

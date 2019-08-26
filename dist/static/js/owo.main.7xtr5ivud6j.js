@@ -1,4 +1,179 @@
-// Mon Aug 26 2019 09:08:04 GMT+0800 (GMT+08:00)
+// Mon Aug 26 2019 09:47:09 GMT+0800 (GMT+08:00)
+
+"use strict";
+
+// 存储页面基本信息
+var owo = {
+  // 页面默认入口 如果没有设置 则取第一个页面为默认页面
+  entry: "home",
+  // 全局方法变量
+  tool: {},
+  // 框架状态变量
+  state: {}
+};
+/*
+  存储每个页面的函数
+  键名：页面名称
+  键值：方法列表
+*/
+
+owo.script = {
+  "home": {
+    "data": {
+      "controls": null,
+      "camera": null,
+      "scene": null,
+      "renderer": null,
+      "light": null,
+      "clock": null,
+      "type": "rotate",
+      "model": null,
+      "runing": false,
+      "Material_58": null,
+      "Material_59": null,
+      "window_box_1": null,
+      "window_box_2": null,
+      "arrow_box": null,
+      "waitTime": 0
+    },
+    "init": function init() {
+      var _this = this;
+
+      // 创建摄像机
+      this.data.camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 20000);
+      this.data.camera.position.set(0, 300, 400);
+      this.data.controls = new THREE.OrbitControls(this.data.camera);
+      this.data.controls.target.set(0, 100, 0);
+      this.data.controls.update();
+      this.data.scene = new THREE.Scene();
+      this.data.scene.background = new THREE.Color(0xa0a0a0);
+      this.data.light = new THREE.HemisphereLight(0xffffff, 0x444444);
+      this.data.light.position.set(0, 200, 0);
+      this.data.scene.add(this.data.light);
+      this.data.light = new THREE.DirectionalLight(0xffffff);
+      this.data.light.position.set(0, 200, 100);
+      this.data.light.castShadow = true;
+      this.data.light.shadow.camera.top = 180;
+      this.data.light.shadow.camera.bottom = -100;
+      this.data.light.shadow.camera.left = -120;
+      this.data.light.shadow.camera.right = 120;
+      this.data.scene.add(this.data.light); // this.data.scene.add( new THREE.CameraHelper( this.data.light.shadow.camera ) );
+      // 网格线
+
+      var grid = new THREE.GridHelper(2000, 20, 0x000000, 0x000000);
+      grid.material.opacity = 0.2;
+      grid.material.transparent = true;
+      this.data.scene.add(grid); // model
+
+      var loader = new THREE.FBXLoader();
+      loader.load('./resource/2.FBX', function (object) {
+        // console.log(object.getObjectByName('Material_58'))
+        // object.scale.set(0.5, 0.5, 0.5)
+        // 处理材质
+        object.traverse(function (child) {
+          // console.log(child.name)
+          if (child.isMesh) {
+            child.castShadow = true;
+            child.receiveShadow = true;
+          }
+        });
+
+        _this.data.scene.add(object);
+      });
+      var xhr = new XMLHttpRequest(); // 请求后台数据
+      // 没有设置允许跨域
+
+      xhr.onreadystatechange = function () {
+        var _this2 = this;
+
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            var data = JSON.parse(xhr.responseText)[0]; // 文字
+
+            var textLoader = new THREE.FontLoader();
+            textLoader.load('./resource/FZKaTong-M19S_Regular.json', function (font) {
+              var textOptions = {
+                size: 2,
+                height: 0,
+                font: font,
+                bevelThickness: 1,
+                bevelSize: 1,
+                bevelSegments: 1,
+                curveSegments: 50,
+                steps: 1
+              };
+              var textGeo = new THREE.TextGeometry(data.MeterId, textOptions);
+              var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial());
+              textMesh.position.set(-2, 187, 40);
+
+              _this2.data.scene.add(textMesh); // MeterName
+
+
+              var textGeo = new THREE.TextGeometry(data.MeterName, textOptions);
+              var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial());
+              textMesh.position.set(-3, 220, 40);
+
+              _this2.data.scene.add(textMesh);
+            });
+          }
+        }
+      };
+
+      xhr.open('get', 'http://116.236.149.162:9900/api/MeterData', true);
+      xhr.send(null);
+      this.data.renderer = new THREE.WebGLRenderer({
+        antialias: true
+      });
+      this.data.renderer.setPixelRatio(window.devicePixelRatio);
+      this.data.renderer.setSize(window.innerWidth, window.innerHeight);
+      this.data.renderer.shadowMap.enabled = true;
+      this.$el.appendChild(this.data.renderer.domElement); // window.addEventListener( 'resize', this.onWindowResize, false );
+    },
+    "animate": function animate() {
+      var _this3 = this;
+
+      var delta = this.data.clock.getDelta();
+
+      if (this.data.runing) {
+        // 旋转模型
+        if (this.data.scene.rotation.y < -Math.PI * 2) this.data.scene.rotation.y = 0; // 模式为旋转
+
+        this.data.scene.rotation.y -= Math.PI * 0.0005;
+      } // this.data.arrow_box.position.y ++
+
+
+      this.data.renderer.render(this.data.scene, this.data.camera);
+      setTimeout(function () {
+        _this3.animate();
+      }, 25);
+    },
+    "onWindowResize": function onWindowResize() {
+      this.data.camera.aspect = window.innerWidth / window.innerHeight;
+      this.data.camera.updateProjectionMatrix();
+      this.data.renderer.setSize(window.innerWidth, window.innerHeight);
+    },
+    "created": function created() {
+      if (WEBGL.isWebGLAvailable() === false) {
+        document.body.appendChild(WEBGL.getWebGLErrorMessage());
+      }
+
+      console.log(this);
+      this.data.clock = new THREE.Clock();
+      this.init();
+      this.animate();
+    },
+    "stop": function stop() {
+      console.log('停止自动旋转!');
+      this.data.runing = false;
+    },
+    "openWindow": function openWindow(name) {
+      owo.script.home.data.scene.children[2].getObjectByName(name).rotation.x = -0.5;
+    },
+    "closeWindow": function closeWindow(name) {
+      owo.script.home.data.scene.children[2].getObjectByName(name).rotation.x = 0;
+    }
+  }
+};
 
 /* 方法合集 */
 var _owo = {

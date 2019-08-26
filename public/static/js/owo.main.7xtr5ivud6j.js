@@ -1,4 +1,4 @@
-// Mon Aug 26 2019 08:41:36 GMT+0800 (GMT+08:00)
+// Mon Aug 26 2019 09:47:09 GMT+0800 (GMT+08:00)
 
 "use strict";
 
@@ -66,7 +66,7 @@ owo.script = {
       this.data.scene.add(grid); // model
 
       var loader = new THREE.FBXLoader();
-      loader.load('./resource/1.FBX', function (object) {
+      loader.load('./resource/2.FBX', function (object) {
         // console.log(object.getObjectByName('Material_58'))
         // object.scale.set(0.5, 0.5, 0.5)
         // 处理材质
@@ -79,14 +79,18 @@ owo.script = {
         });
 
         _this.data.scene.add(object);
-      }); // 文字
-      var xhr = new XMLHttpRequest ( ) ;
-      // 请求后台数据
+      });
+      var xhr = new XMLHttpRequest(); // 请求后台数据
       // 没有设置允许跨域
-      xhr.onreadystatechange=function(){
+      var _this2 = this;
+      xhr.onreadystatechange = function () {
+        
+
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
-            var data = JSON.parse(xhr.responseText)[0]
+            var data = JSON.parse(xhr.responseText)[0]; // 文字
+            console.log(data)
+            var textLoader = new THREE.FontLoader();
             textLoader.load('./resource/FZKaTong-M19S_Regular.json', function (font) {
               var textOptions = {
                 size: 2,
@@ -96,71 +100,27 @@ owo.script = {
                 bevelSize: 1,
                 bevelSegments: 1,
                 curveSegments: 50,
-                steps: 1 // ID
-      
+                steps: 1
               };
-              var textGeo = new THREE.TextGeometry(data.MeterId, textOptions);
-              var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial());
-              textMesh.position.set(-15, 109, 51);
-      
-              _this.data.scene.add(textMesh); // MeterCode
-      
-      
               var textGeo = new THREE.TextGeometry(data.MeterCode, textOptions);
               var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial());
-              textMesh.position.set(-2, 187, 50);
-      
-              _this.data.scene.add(textMesh); // MeterName
-      
-      
-              var textGeo = new THREE.TextGeometry(data.MeterName, textOptions);
+              textMesh.position.set(-2, 214, 41);
+
+              _this2.data.scene.add(textMesh); // MeterName
+
+
+              var textGeo = new THREE.TextGeometry(data.MeterName + '', textOptions);
               var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial());
-              textMesh.position.set(-3, 190, 50);
-      
-              _this.data.scene.add(textMesh); // MeterParamId
-      
-      
-              var textGeo = new THREE.TextGeometry(data.MeterParamId, textOptions);
-              var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial());
-              textMesh.position.set(-15, 106, 51);
-      
-              _this.data.scene.add(textMesh); // MeterParamName
-      
-      
-              var textGeo = new THREE.TextGeometry(data.MeterParamName, textOptions);
-              var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial());
-              textMesh.position.set(-15, 97, 51);
-      
-              _this.data.scene.add(textMesh); // ParamCode
-      
-      
-              var textGeo = new THREE.TextGeometry(data.ParamCode, textOptions);
-              var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial());
-              textMesh.position.set(-15, 103, 51);
-      
-              _this.data.scene.add(textMesh); // CollectTime
-      
-      
-              var textGeo = new THREE.TextGeometry(data.CollectTime, textOptions);
-              var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial());
-              textMesh.position.set(-15, 100, 51);
-      
-              _this.data.scene.add(textMesh); // Value
-      
-      
-              var textGeo = new THREE.TextGeometry(data.Value + '', textOptions);
-              var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial());
-              textMesh.position.set(-3, 211, 50);
-      
-              _this.data.scene.add(textMesh);
+              textMesh.position.set(-3, 217, 41);
+
+              _this2.data.scene.add(textMesh);
             });
           }
         }
-      }
-      xhr.open('get','http://116.236.149.162:9900/api/MeterData',true);
-      xhr.send(null)
-      var textLoader = new THREE.FontLoader();
-      
+      };
+
+      xhr.open('get', 'http://116.236.149.162:9900/api/MeterData', true);
+      xhr.send(null);
       this.data.renderer = new THREE.WebGLRenderer({
         antialias: true
       });
@@ -170,7 +130,7 @@ owo.script = {
       this.$el.appendChild(this.data.renderer.domElement); // window.addEventListener( 'resize', this.onWindowResize, false );
     },
     "animate": function animate() {
-      var _this2 = this;
+      var _this3 = this;
 
       var delta = this.data.clock.getDelta();
 
@@ -184,11 +144,10 @@ owo.script = {
 
       this.data.renderer.render(this.data.scene, this.data.camera);
       setTimeout(function () {
-        _this2.animate();
+        _this3.animate();
       }, 25);
     },
     "onWindowResize": function onWindowResize() {
-      
       this.data.camera.aspect = window.innerWidth / window.innerHeight;
       this.data.camera.updateProjectionMatrix();
       this.data.renderer.setSize(window.innerWidth, window.innerHeight);

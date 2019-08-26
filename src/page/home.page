@@ -77,63 +77,44 @@
 
       } );
 
-      // 文字
-      var textLoader = new THREE.FontLoader()
-      
-      textLoader.load('./resource/FZKaTong-M19S_Regular.json', (font) => {
-        var textOptions = {
-          size: 2,
-          height: 0,
-          font: font,
-          bevelThickness: 1,
-          bevelSize: 1,
-          bevelSegments: 1,
-          curveSegments: 50,
-          steps: 1
+
+      var xhr = new XMLHttpRequest ( ) ;
+      // 请求后台数据
+      // 没有设置允许跨域
+      xhr.onreadystatechange=function(){
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            var data = JSON.parse(xhr.responseText)[0]
+            // 文字
+            var textLoader = new THREE.FontLoader()
+            
+            textLoader.load('./resource/FZKaTong-M19S_Regular.json', (font) => {
+              var textOptions = {
+                size: 2,
+                height: 0,
+                font: font,
+                bevelThickness: 1,
+                bevelSize: 1,
+                bevelSegments: 1,
+                curveSegments: 50,
+                steps: 1
+              }
+              
+              var textGeo = new THREE.TextGeometry(data.MeterId, textOptions);
+              var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
+              textMesh.position.set( -2, 187, 40 )
+              this.data.scene.add(textMesh)
+              // MeterName
+              var textGeo = new THREE.TextGeometry(data.MeterName, textOptions);
+              var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
+              textMesh.position.set( -3, 220, 40 )
+              this.data.scene.add(textMesh)
+            });
+          }
         }
-        // ID
-        // var textGeo = new THREE.TextGeometry('ID: 000001G0010001', textOptions);
-        // var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
-        // textMesh.position.set( -15, 109, 51 )
-        // this.data.scene.add(textMesh)
-        // MeterCode
-        var textGeo = new THREE.TextGeometry('P33', textOptions);
-        var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
-        textMesh.position.set( -2, 187, 40 )
-        this.data.scene.add(textMesh)
-        // MeterName
-        var textGeo = new THREE.TextGeometry('进线', textOptions);
-        var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
-        textMesh.position.set( -3, 220, 40 )
-        this.data.scene.add(textMesh)
-        // // MeterParamId
-        // var textGeo = new THREE.TextGeometry('31000000000700', textOptions);
-        // var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
-        // textMesh.position.set( -15, 106, 51 )
-        // this.data.scene.add(textMesh)
-        // // MeterParamName
-        // var textGeo = new THREE.TextGeometry('A相电压', textOptions);
-        // var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
-        // textMesh.position.set( -15, 97, 51 )
-        // this.data.scene.add(textMesh)
-        // // ParamCode
-        // var textGeo = new THREE.TextGeometry('ParamCode: Ua', textOptions);
-        // var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
-        // textMesh.position.set( -15, 103, 51 )
-        // this.data.scene.add(textMesh)
-        // // CollectTime
-        // var textGeo = new THREE.TextGeometry('2019-08-25T21:25:00', textOptions);
-        // var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
-        // textMesh.position.set( -15, 100, 51 )
-        // this.data.scene.add(textMesh)
-        // // Value
-        // var textGeo = new THREE.TextGeometry('228.300000', textOptions);
-        // var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
-        // textMesh.position.set( -6, 211, 50 )
-        // this.data.scene.add(textMesh)
-      });
-      
-      
+      }
+      xhr.open('get','http://116.236.149.162:9900/api/MeterData',true);
+      xhr.send(null)
 
 
       this.data.renderer = new THREE.WebGLRenderer( { antialias: true } );
