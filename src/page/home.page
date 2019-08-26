@@ -62,7 +62,7 @@
 
       // model
       var loader = new THREE.FBXLoader();
-      loader.load( './resource/1.FBX', ( object ) => {
+      loader.load( './resource/2.FBX', ( object ) => {
         // console.log(object.getObjectByName('Material_58'))
         // object.scale.set(0.5, 0.5, 0.5)
         // 处理材质
@@ -92,45 +92,45 @@
           steps: 1
         }
         // ID
-        var textGeo = new THREE.TextGeometry('ID: 000001G0010001', textOptions);
-        var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
-        textMesh.position.set( -15, 109, 51 )
-        this.data.scene.add(textMesh)
+        // var textGeo = new THREE.TextGeometry('ID: 000001G0010001', textOptions);
+        // var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
+        // textMesh.position.set( -15, 109, 51 )
+        // this.data.scene.add(textMesh)
         // MeterCode
-        var textGeo = new THREE.TextGeometry('P32', textOptions);
+        var textGeo = new THREE.TextGeometry('P33', textOptions);
         var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
-        textMesh.position.set( -2, 187, 50 )
+        textMesh.position.set( -2, 187, 40 )
         this.data.scene.add(textMesh)
         // MeterName
         var textGeo = new THREE.TextGeometry('进线', textOptions);
         var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
-        textMesh.position.set( -3, 190, 50 )
+        textMesh.position.set( -3, 220, 40 )
         this.data.scene.add(textMesh)
-        // MeterParamId
-        var textGeo = new THREE.TextGeometry('31000000000700', textOptions);
-        var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
-        textMesh.position.set( -15, 106, 51 )
-        this.data.scene.add(textMesh)
-        // MeterParamName
-        var textGeo = new THREE.TextGeometry('A相电压', textOptions);
-        var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
-        textMesh.position.set( -15, 97, 51 )
-        this.data.scene.add(textMesh)
-        // ParamCode
-        var textGeo = new THREE.TextGeometry('ParamCode: Ua', textOptions);
-        var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
-        textMesh.position.set( -15, 103, 51 )
-        this.data.scene.add(textMesh)
-        // CollectTime
-        var textGeo = new THREE.TextGeometry('2019-08-25T21:25:00', textOptions);
-        var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
-        textMesh.position.set( -15, 100, 51 )
-        this.data.scene.add(textMesh)
-        // Value
-        var textGeo = new THREE.TextGeometry('228.300000', textOptions);
-        var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
-        textMesh.position.set( -6, 211, 50 )
-        this.data.scene.add(textMesh)
+        // // MeterParamId
+        // var textGeo = new THREE.TextGeometry('31000000000700', textOptions);
+        // var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
+        // textMesh.position.set( -15, 106, 51 )
+        // this.data.scene.add(textMesh)
+        // // MeterParamName
+        // var textGeo = new THREE.TextGeometry('A相电压', textOptions);
+        // var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
+        // textMesh.position.set( -15, 97, 51 )
+        // this.data.scene.add(textMesh)
+        // // ParamCode
+        // var textGeo = new THREE.TextGeometry('ParamCode: Ua', textOptions);
+        // var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
+        // textMesh.position.set( -15, 103, 51 )
+        // this.data.scene.add(textMesh)
+        // // CollectTime
+        // var textGeo = new THREE.TextGeometry('2019-08-25T21:25:00', textOptions);
+        // var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
+        // textMesh.position.set( -15, 100, 51 )
+        // this.data.scene.add(textMesh)
+        // // Value
+        // var textGeo = new THREE.TextGeometry('228.300000', textOptions);
+        // var textMesh = new THREE.Mesh(textGeo, new THREE.MeshBasicMaterial())
+        // textMesh.position.set( -6, 211, 50 )
+        // this.data.scene.add(textMesh)
       });
       
       
